@@ -1,0 +1,46 @@
+# verb-Azure.psm1
+
+
+<#
+.SYNOPSIS
+verb-Azure - Generic network-related functions
+.NOTES
+Version     : 1.0.0.0
+Author      : Todd Kadrie
+Website     :	https://www.toddomation.com
+Twitter     :	@tostka
+CreatedDate : 4/8/2020
+FileName    : verb-Azure.psm1
+License     : MIT
+Copyright   : (c) 4/8/2020 Todd Kadrie
+Github      : https://github.com/tostka
+REVISIONS
+* 4/8/2020 - 1.0.0.0
+* 12:07 PM 8/28/2019 updated
+# 12:00 PM 12/7/2018 new verb-Azure module
+.DESCRIPTION
+verb-Azure - Generic network-related functions
+.LINK
+https://github.com/tostka/verb-Azure
+#>
+
+
+$script:ModuleRoot = $PSScriptRoot ; 
+$script:ModuleVersion = (Import-PowerShellDataFile -Path (get-childitem $script:moduleroot\*.psd1).fullname).moduleversion ; 
+
+#Get public and private function definition files.
+$functionFolders = @('Public', 'Internal', 'Classes') ;
+ForEach ($folder in $functionFolders) {
+    $folderPath = Join-Path -Path $PSScriptRoot -ChildPath $folder ;
+    If (Test-Path -Path $folderPath) {
+        Write-Verbose -Message "Importing from $folder" ;
+        $functions = Get-ChildItem -Path $folderPath -Filter '*.ps1'  ;
+        ForEach ($function in $functions) {
+            Write-Verbose -Message "  Importing $($function.BaseName)" ;
+            . $($function.FullName) ;
+        } ;
+    } ;
+} ;
+$publicFunctions = (Get-ChildItem -Path "$PSScriptRoot\Public" -Filter '*.ps1').BaseName ;
+Export-ModuleMember -Function $publicFunctions -Alias * ; 
+
