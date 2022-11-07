@@ -1,4 +1,4 @@
-#*------v Function get-AADBearToken v------
+﻿#*------v Function get-AADBearToken v------
 function get-AADBearToken {
     <#
     .SYNOPSIS

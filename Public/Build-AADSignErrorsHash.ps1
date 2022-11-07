@@ -1,4 +1,4 @@
-#*------v Function Build-AADSignErrorsHash v------
+﻿#*------v Function Build-AADSignErrorsHash v------
 function Build-AADSignErrorsHash {
         <#
         .SYNOPSIS
