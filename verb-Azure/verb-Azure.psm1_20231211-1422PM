@@ -5,7 +5,7 @@
 .SYNOPSIS
 verb-Azure - Generic network-related functions
 .NOTES
-Version     : 1.0.3.0
+Version     : 1.0.2.0
 Author      : Todd Kadrie
 Website     :	https://www.toddomation.com
 Twitter     :	@tostka
@@ -200,7 +200,7 @@ Function get-AADBearerTokenHeaders {
     .SYNOPSIS
     get-AADBearerTokenHeaders .ps1 - retrieve an AzureAD auth token
     .NOTES
-    Version     : 1.0.1
+    Version     : 1.0.2
     Author      : Todd Kadrie
     Website     :	http://www.toddomation.com
     Twitter     :	@tostka / http://twitter.com/tostka
@@ -246,7 +246,7 @@ function get-AADBearToken {
     .SYNOPSIS
     get-AADBearToken .ps1 - retrieve an AzureAD auth token
     .NOTES
-    Version     : 1.0.1
+    Version     : 1.0.2
     Author      : Todd Kadrie
     Website     :	http://www.toddomation.com
     Twitter     :	@tostka / http://twitter.com/tostka
@@ -310,8 +310,8 @@ Export-ModuleMember -Function Build-AADSignErrorsHash,get-AADBearerTokenHeaders,
 # SIG # Begin signature block
 # MIIELgYJKoZIhvcNAQcCoIIEHzCCBBsCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUNXd7wCmbwTjk4Hezb3uGEY0m
-# IRugggI4MIICNDCCAaGgAwIBAgIQWsnStFUuSIVNR8uhNSlE6TAJBgUrDgMCHQUA
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUyDddP2xBndbWFZWgkJvTIyM1
+# cy+gggI4MIICNDCCAaGgAwIBAgIQWsnStFUuSIVNR8uhNSlE6TAJBgUrDgMCHQUA
 # MCwxKjAoBgNVBAMTIVBvd2VyU2hlbGwgTG9jYWwgQ2VydGlmaWNhdGUgUm9vdDAe
 # Fw0xNDEyMjkxNzA3MzNaFw0zOTEyMzEyMzU5NTlaMBUxEzARBgNVBAMTClRvZGRT
 # ZWxmSUkwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALqRVt7uNweTkZZ+16QG
@@ -326,9 +326,9 @@ Export-ModuleMember -Function Build-AADSignErrorsHash,get-AADBearerTokenHeaders,
 # AWAwggFcAgEBMEAwLDEqMCgGA1UEAxMhUG93ZXJTaGVsbCBMb2NhbCBDZXJ0aWZp
 # Y2F0ZSBSb290AhBaydK0VS5IhU1Hy6E1KUTpMAkGBSsOAwIaBQCgeDAYBgorBgEE
 # AYI3AgEMMQowCKACgAChAoAAMBkGCSqGSIb3DQEJAzEMBgorBgEEAYI3AgEEMBwG
-# CisGAQQBgjcCAQsxDjAMBgorBgEEAYI3AgEVMCMGCSqGSIb3DQEJBDEWBBRFqA1x
-# N5XRJBa7ohlfNC6JzpVNpjANBgkqhkiG9w0BAQEFAASBgF1cmnAqk5D3aXOy/Omv
-# 5Tdm4G3AUwW1NA9lfXVqCL6idTXoAZQlXm/LhCNR8S0CgS/tl4WkhgJdSupjrIR3
-# wyfLye17A+61edovFiLMF0SunwwX+D6A/cQV7qWHHkTO0StkwHBr9wutA1nunQbV
-# bx8lB9TdtGMxEl8Vfl8Knz6s
+# CisGAQQBgjcCAQsxDjAMBgorBgEEAYI3AgEVMCMGCSqGSIb3DQEJBDEWBBQAB6qx
+# cSbrNpecnnGdSSVnxaxZ4zANBgkqhkiG9w0BAQEFAASBgJE3iQrr+5DBga6AQn0F
+# lsItoapBUVWL9OmKKeNf1NcrXSW+Vv/DSGeBAa0h/h0bedqBSaP7JpIsFh/SlTPD
+# KcAwmZ6X0bf5RGEg1/xXlzdrmKm0l/XHNzEXzDB0ywY3LG0OlE2Djl0oAHsvVhfO
+# QFBnxt5ddD3CDmGUzSc4u1H2
 # SIG # End signature block

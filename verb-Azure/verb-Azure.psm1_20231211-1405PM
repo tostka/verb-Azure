@@ -5,7 +5,7 @@
 .SYNOPSIS
 verb-Azure - Generic network-related functions
 .NOTES
-Version     : 1.0.3.0
+Version     : 1.0.1.0
 Author      : Todd Kadrie
 Website     :	https://www.toddomation.com
 Twitter     :	@tostka
@@ -25,12 +25,8 @@ https://github.com/tostka/verb-Azure
 #>
 
 
-    $script:ModuleRoot = $PSScriptRoot ;
-    $script:ModuleVersion = (Import-PowerShellDataFile -Path (get-childitem $script:moduleroot\*.psd1).fullname).moduleversion ;
-    $runningInVsCode = $env:TERM_PROGRAM -eq 'vscode' ;
-
-#*======v FUNCTIONS v======
-
+$script:ModuleRoot = $PSScriptRoot ; 
+$script:ModuleVersion = (Import-PowerShellDataFile -Path (get-childitem $script:moduleroot\*.psd1).fullname).moduleversion ; 
 
 
 
@@ -193,7 +189,6 @@ function Build-AADSignErrorsHash {
 
 #*------^ Build-AADSignErrorsHash.ps1 ^------
 
-
 #*------v get-AADBearerTokenHeaders.ps1 v------
 Function get-AADBearerTokenHeaders {
     <#
@@ -238,7 +233,6 @@ Function get-AADBearerTokenHeaders {
 }
 
 #*------^ get-AADBearerTokenHeaders.ps1 ^------
-
 
 #*------v get-AADBearToken.ps1 v------
 function get-AADBearToken {
@@ -299,19 +293,16 @@ function get-AADBearToken {
 
 #*------^ get-AADBearToken.ps1 ^------
 
-
 #*======^ END FUNCTIONS ^======
 
 Export-ModuleMember -Function Build-AADSignErrorsHash,get-AADBearerTokenHeaders,get-AADBearToken -Alias *
 
 
-
-
 # SIG # Begin signature block
 # MIIELgYJKoZIhvcNAQcCoIIEHzCCBBsCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUNXd7wCmbwTjk4Hezb3uGEY0m
-# IRugggI4MIICNDCCAaGgAwIBAgIQWsnStFUuSIVNR8uhNSlE6TAJBgUrDgMCHQUA
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUdeWRKaYHS10YdakpJrl+Rpk4
+# etGgggI4MIICNDCCAaGgAwIBAgIQWsnStFUuSIVNR8uhNSlE6TAJBgUrDgMCHQUA
 # MCwxKjAoBgNVBAMTIVBvd2VyU2hlbGwgTG9jYWwgQ2VydGlmaWNhdGUgUm9vdDAe
 # Fw0xNDEyMjkxNzA3MzNaFw0zOTEyMzEyMzU5NTlaMBUxEzARBgNVBAMTClRvZGRT
 # ZWxmSUkwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALqRVt7uNweTkZZ+16QG
@@ -326,9 +317,9 @@ Export-ModuleMember -Function Build-AADSignErrorsHash,get-AADBearerTokenHeaders,
 # AWAwggFcAgEBMEAwLDEqMCgGA1UEAxMhUG93ZXJTaGVsbCBMb2NhbCBDZXJ0aWZp
 # Y2F0ZSBSb290AhBaydK0VS5IhU1Hy6E1KUTpMAkGBSsOAwIaBQCgeDAYBgorBgEE
 # AYI3AgEMMQowCKACgAChAoAAMBkGCSqGSIb3DQEJAzEMBgorBgEEAYI3AgEEMBwG
-# CisGAQQBgjcCAQsxDjAMBgorBgEEAYI3AgEVMCMGCSqGSIb3DQEJBDEWBBRFqA1x
-# N5XRJBa7ohlfNC6JzpVNpjANBgkqhkiG9w0BAQEFAASBgF1cmnAqk5D3aXOy/Omv
-# 5Tdm4G3AUwW1NA9lfXVqCL6idTXoAZQlXm/LhCNR8S0CgS/tl4WkhgJdSupjrIR3
-# wyfLye17A+61edovFiLMF0SunwwX+D6A/cQV7qWHHkTO0StkwHBr9wutA1nunQbV
-# bx8lB9TdtGMxEl8Vfl8Knz6s
+# CisGAQQBgjcCAQsxDjAMBgorBgEEAYI3AgEVMCMGCSqGSIb3DQEJBDEWBBQf3E4o
+# X0TJJ+jNvwkiNY4UjawR5DANBgkqhkiG9w0BAQEFAASBgD5QXcqhIi7SFOYt3X9L
+# Dm0bUCx36xlVqZOnUqvm8zRHORuC0TXvFK6jvG2woOxglTPTxU/D/GovQBZCBoy1
+# myZ3NbPGjsgcOBuoSkzcbU6gUXEQnlFhKdRvi5dQ4IpstZZZTIlUM8t99koTDmV5
+# g8ujfFVy7V5neyFSI8yt+dYH
 # SIG # End signature block

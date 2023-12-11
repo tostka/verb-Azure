@@ -12,7 +12,7 @@
 RootModule = 'verb-Azure.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.0.1'
+ModuleVersion = '1.0.3'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -87,7 +87,7 @@ AliasesToExport = '*'
 # ModuleList = @()
 
 # List of all files packaged with this module
-# FileList = @()
+FileList = @('Quick-Start-Installation-and-Example.md','CHANGELOG.md','LICENSE.txt','README.md')
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
 PrivateData = @{
@@ -123,11 +123,16 @@ PrivateData = @{
 
 
 
+
+
+
+
+
 # SIG # Begin signature block
 # MIIELgYJKoZIhvcNAQcCoIIEHzCCBBsCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUPpfmmBtnaUVorbPVmW9ToS5R
-# BpqgggI4MIICNDCCAaGgAwIBAgIQWsnStFUuSIVNR8uhNSlE6TAJBgUrDgMCHQUA
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUEyrVtGoFcPQ4RRi93o6BBfKZ
+# O+SgggI4MIICNDCCAaGgAwIBAgIQWsnStFUuSIVNR8uhNSlE6TAJBgUrDgMCHQUA
 # MCwxKjAoBgNVBAMTIVBvd2VyU2hlbGwgTG9jYWwgQ2VydGlmaWNhdGUgUm9vdDAe
 # Fw0xNDEyMjkxNzA3MzNaFw0zOTEyMzEyMzU5NTlaMBUxEzARBgNVBAMTClRvZGRT
 # ZWxmSUkwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALqRVt7uNweTkZZ+16QG
@@ -142,9 +147,9 @@ PrivateData = @{
 # AWAwggFcAgEBMEAwLDEqMCgGA1UEAxMhUG93ZXJTaGVsbCBMb2NhbCBDZXJ0aWZp
 # Y2F0ZSBSb290AhBaydK0VS5IhU1Hy6E1KUTpMAkGBSsOAwIaBQCgeDAYBgorBgEE
 # AYI3AgEMMQowCKACgAChAoAAMBkGCSqGSIb3DQEJAzEMBgorBgEEAYI3AgEEMBwG
-# CisGAQQBgjcCAQsxDjAMBgorBgEEAYI3AgEVMCMGCSqGSIb3DQEJBDEWBBStq/Bo
-# cO97Me4wtsBCCwZ4eFBPczANBgkqhkiG9w0BAQEFAASBgIohsmCqJPkmd3QE2IOB
-# vUxiYKIt87lpC23WPTBIeUptcBKbDokrPZVz5FcHOpZ4vKCZidSipSuINPE/kWEG
-# yhyUjGHvfPp8/KmE2Q2jMLkQHcg2bACyHPteQ8foCByh4Wm7cyj584jFGLo/bWt4
-# 73aslZxuOTSNkqtjSVpPCRVU
+# CisGAQQBgjcCAQsxDjAMBgorBgEEAYI3AgEVMCMGCSqGSIb3DQEJBDEWBBQ91JEh
+# KKjtv3K5lQObhaqo/qU3NDANBgkqhkiG9w0BAQEFAASBgHeYisZCsptRDai6V+Kq
+# fznjgYNFwscMw+MpFoQIDGtAvJDOkLnj9lWhOPnLrniRxna8qCDx4QOIKDcsaLF7
+# ig0NHbXdNiAL280QYjwrLAFiisJi7NvTEIZ5W8p224hRAz03mdJnGAKu2z9qNiEJ
+# CqzOft7Fv+Z/mcrWN595bxaA
 # SIG # End signature block

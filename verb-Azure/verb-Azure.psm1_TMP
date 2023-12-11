@@ -1,11 +1,11 @@
-# verb-Azure.psm1
+﻿# verb-Azure.psm1
 
 
 <#
 .SYNOPSIS
 verb-Azure - Generic network-related functions
 .NOTES
-Version     : 1.0.0.0
+Version     : 1.0.3.0
 Author      : Todd Kadrie
 Website     :	https://www.toddomation.com
 Twitter     :	@tostka
@@ -25,8 +25,12 @@ https://github.com/tostka/verb-Azure
 #>
 
 
-$script:ModuleRoot = $PSScriptRoot ; 
-$script:ModuleVersion = (Import-PowerShellDataFile -Path (get-childitem $script:moduleroot\*.psd1).fullname).moduleversion ; 
+    $script:ModuleRoot = $PSScriptRoot ;
+    $script:ModuleVersion = (Import-PowerShellDataFile -Path (get-childitem $script:moduleroot\*.psd1).fullname).moduleversion ;
+    $runningInVsCode = $env:TERM_PROGRAM -eq 'vscode' ;
+
+#*======v FUNCTIONS v======
+
 
 
 
@@ -189,6 +193,7 @@ function Build-AADSignErrorsHash {
 
 #*------^ Build-AADSignErrorsHash.ps1 ^------
 
+
 #*------v get-AADBearerTokenHeaders.ps1 v------
 Function get-AADBearerTokenHeaders {
     <#
@@ -233,6 +238,7 @@ Function get-AADBearerTokenHeaders {
 }
 
 #*------^ get-AADBearerTokenHeaders.ps1 ^------
+
 
 #*------v get-AADBearToken.ps1 v------
 function get-AADBearToken {
@@ -293,7 +299,10 @@ function get-AADBearToken {
 
 #*------^ get-AADBearToken.ps1 ^------
 
+
 #*======^ END FUNCTIONS ^======
 
 Export-ModuleMember -Function Build-AADSignErrorsHash,get-AADBearerTokenHeaders,get-AADBearToken -Alias *
+
+
 
